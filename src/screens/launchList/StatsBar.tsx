@@ -1,6 +1,7 @@
 import React from 'react';
+import { Launch } from '../../types';
 
-const StatsBar = ({ launches }) => {
+const StatsBar: React.FC<{ launches: Launch[] }> = ({ launches }) => {
   return (
     <section className="bg-white py-4 font-sans">
       <div className="container max-w-xl m-auto flex flex-wrap md:flex-no-wrap items-center justify-center">

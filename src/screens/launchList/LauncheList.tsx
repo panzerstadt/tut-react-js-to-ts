@@ -1,5 +1,10 @@
 import React from 'react';
-const LauncheList = ({ launches, onSelectLaunch }) => {
+import { Launch } from '../../types';
+
+const LauncheList: React.FC<{
+  launches: Launch[];
+  onSelectLaunch: Function;
+}> = ({ launches, onSelectLaunch }) => {
   return (
     <section className="my-8 font-sans container m-auto max-w-xl ">
       <div className="flex flex-col sm:flex-row flex-wrap my-8">

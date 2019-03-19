@@ -1,6 +1,12 @@
 import React from 'react';
 
-const Tabs = ({ selectedTab, tabs, filterText, onSelectTab, onFilterTextChange }) => {
+const Tabs: React.FC<{
+  selectedTab: string;
+  tabs: string[];
+  filterText: string;
+  onSelectTab: Function;
+  onFilterTextChange: Function;
+}> = ({ selectedTab, tabs, filterText, onSelectTab, onFilterTextChange }) => {
   return (
     <section className="bg-white py-4 font-sans">
       <div className="container m-auto max-w-xl flex items-baseline justify-start border-b-2 border-grey-light mb-10 ">

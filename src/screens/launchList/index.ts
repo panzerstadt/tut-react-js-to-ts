@@ -1,3 +1,3 @@
-import LauncheListScreen from './LauncheListScreen.jsx';
+import LauncheListScreen from './LauncheListScreen';
 
 export default LauncheListScreen;

@@ -1,4 +1,6 @@
-export const pastLaunches = [
+import { Launch } from '../types';
+
+export const pastLaunches: Launch[] = [
   {
     flight_number: 1,
     launch_year: '2006',

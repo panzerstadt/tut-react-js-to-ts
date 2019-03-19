@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { Props } from 'react';
 import LaunchListScreen from './screens/launchList';
 import LaunchDetailsScreen from './screens/launchDetails';
 import './styles.scss';
 
-class App extends React.Component {
+type MyProps = {};
+
+type MyState = {
+  selectedFlightNumber?: number | null;
+};
+
+class App extends React.Component<MyProps, MyState> {
   state = { selectedFlightNumber: null };
 
-  setSelectedFlightNumber = selectedFlightNumber =>
+  setSelectedFlightNumber = (selectedFlightNumber: any) =>
     this.setState({ selectedFlightNumber });
 
   render() {
-    const {selectedFlightNumber} = this.state;
+    const { selectedFlightNumber } = this.state;
     return (
       <div>
         <nav className="font-sans bg-white text-center flex justify-between my-4 mx-auto container overflow-hidden items-center">
@@ -30,7 +36,9 @@ class App extends React.Component {
         {selectedFlightNumber ? (
           <LaunchDetailsScreen
             flightNumber={selectedFlightNumber}
-            onClose={() => this.setSelectedFlightNumber(null)}
+            onClose={(event: React.MouseEvent): void =>
+              this.setSelectedFlightNumber(null)
+            }
           />
         ) : (
           <LaunchListScreen onSelectLaunch={this.setSelectedFlightNumber} />

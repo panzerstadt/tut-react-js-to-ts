@@ -1,3 +1,3 @@
-import LaunchDetails from './LaunchDetailsScreen.jsx';
+import LaunchDetails from './LaunchDetailsScreen';
 
 export default LaunchDetails;

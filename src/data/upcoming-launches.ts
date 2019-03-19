@@ -1,4 +1,6 @@
-export const upcomingLaunches = [
+import { Launch } from '../types';
+
+export const upcomingLaunches: Launch[] = [
   {
     flight_number: 74,
     launch_year: '2019',
